@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+
+    int A, B;
+    printf("Введите A и B: ");
+    scanf("%d %d", &A, &B);
+
+  
+    if ( ((A % 2 == 0) && (B % 2 != 0)) ||
+         ((A % 2 != 0) && (B % 2 == 0)) ) {
+        printf("Пароль активен\n");
+    }
+    else {
+        printf("Пароль не активен\n");
+    }
+
+    return 0;
+}
