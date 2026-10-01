@@ -1,0 +1,16 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+
+    char c;
+    printf("Введите символ: ");
+    scanf(" %c", &c);
+
+    printf("Символ:          %c\n", c);
+    printf("Десятичный код:  %d\n", c);
+    printf("Шестнадцатер.:   %x\n", c);
+
+    return 0;
+}
