@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+
+int main() {
+    setlocale(LC_ALL, "Russian");
+
+    char   c = '!';
+    int    i = 2;
+    float  f = 3.14f;
+    double d = 5e-12;
+
+    printf("--- Начальные значения ---\n");
+    printf("char   c = %c\n",  c);
+    printf("int    i = %d\n",  i);
+    printf("float  f = %f\n",  f);
+    printf("double d = %le\n", d);   // %le — экспоненциальный формат для double
+
+    printf("\nВведите char, int, float, double: ");
+    scanf(" %c %d %f %lf", &c, &i, &f, &d);
+
+    printf("\n--- Новые значения ---\n");
+    printf("char   c = %c\n",  c);
+    printf("int    i = %d\n",  i);
+    printf("float  f = %f\n",  f);
+    printf("double d = %lf\n", d);
+
+    return 0;
+}
